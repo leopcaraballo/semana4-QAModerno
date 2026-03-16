@@ -1,0 +1,34 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "gradle-test",
+			"type": "shell",
+			"command": "env",
+			"args": [
+				"JAVA_HOME=/usr/lib/jvm/java-25-openjdk-amd64",
+				"PATH=/usr/lib/jvm/java-25-openjdk-amd64/bin:$PATH",
+				"./gradlew",
+				"clean",
+				"test"
+			],
+			"isBackground": false,
+			"group": "test"
+		},
+		{
+			"label": "gradle-wrapper-verify",
+			"type": "shell",
+			"command": "env",
+			"args": [
+				"JAVA_HOME=/usr/lib/jvm/java-25-openjdk-amd64",
+				"PATH=/usr/lib/jvm/java-25-openjdk-amd64/bin:$PATH",
+				"./gradlew",
+				"clean",
+				"test",
+				"--console=plain"
+			],
+			"isBackground": false,
+			"group": "test"
+		}
+	]
+}
